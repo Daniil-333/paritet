@@ -1,0 +1,19 @@
+@use "sass:math";
+
+@import '../../node_modules/@splidejs/splide/dist/css/splide.min';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@400;500;800&display=swap');
+
+
+@import "vars/colors";
+@import "vars/variables";
+
+@import "base/mixin";
+@import "base/null";
+
+@import "base";
+
+@import "./parts/header";
+@import "./parts/footer";
+
+@import "./page/main";

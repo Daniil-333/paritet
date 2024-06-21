@@ -1,0 +1,152 @@
+@use 'sass:math';
+
+body {
+  width: 100%;
+    min-height: 100%;
+    background-color: #ccc;
+    line-height: 1.3;
+
+  &._locked {
+    position: fixed;
+    left: 0;
+    overflow: hidden;
+  }
+  &._fixPadding {
+    @media screen and (min-width: #{$desktop}) {
+      padding-right: 17px;
+    }
+  }
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+}
+
+.main {
+    padding: 30px 30px 60px 320px;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    overflow-y: auto;
+
+    &__wrap {
+        height: 100%;
+        display: grid;
+        grid-template-rows: 60px 1fr;
+        border: 1px solid #eee;
+        background: #cecece;
+    }
+
+    &__header {
+        border-bottom: 1px solid #212121;
+        padding: 20px;
+
+        h2 {
+            font-size: 30px;
+            line-height: 1;
+            color: #fdf064;
+
+            >a {
+                color: inherit;
+            }
+        }
+    }
+
+    &__main {
+    }
+
+    &__list {}
+
+    &__item {
+        display: flex;
+        font-size: 24px;
+        line-height: 1;
+        color: #ff4;
+
+        >a {
+            color: inherit;
+            width: 100%;
+            padding: 15px 20px;
+
+            &:hover {
+                text-decoration: underline;
+                text-underline-offset: 4px;
+            }
+        }
+    }
+
+    &__footer {
+    }
+}
+
+.table {
+    width: 100%;
+
+    thead {
+        th {
+            font-weight: 900;
+            padding: 15px 0;
+        }
+    }
+
+    tbody {
+        tr {
+            td {
+                border: 1px solid #ececec;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+.ui-input {
+    position: relative;
+
+    &__file {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+
+    &__label {
+        display: inline-block;
+        font-weight: 500;
+        font-size: 14px;
+        color: rgb(55, 65, 81);
+        margin-bottom: 8px;
+    }
+
+    &__drag {
+        width: 200px;
+        height: 100px;
+        position: relative;
+        z-index: 1;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 0;
+        border: 1px dashed #2563eb;
+        border-radius: 5px;
+        cursor: pointer;
+
+        >img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

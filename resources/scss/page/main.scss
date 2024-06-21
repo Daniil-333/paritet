@@ -1,0 +1,855 @@
+@import "../libs/animate";
+
+.promo {
+    overflow: hidden;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        padding: 7rem 0 10rem 0;
+
+        @media screen and (max-width: #{$desktop}) {
+            flex-direction: column-reverse;
+            padding: 0 0 10rem 0;
+        }
+
+        @media screen and (max-width: #{$tabletL}) {
+            padding: 0 0 6rem 0;
+        }
+
+        @media screen and (max-width: #{$tabletM}) {
+            padding: 0 0 4rem 0;
+        }
+    }
+
+    &__left {
+
+        @media screen and (min-width: #{$desktop}) {
+            flex: 0 1 490px;
+        }
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: 25px;
+        line-height: 1;
+        color: #ffffff;
+        margin-bottom: 1rem;
+
+        >span:last-child {
+            display: block;
+            font-size: 75px;
+            line-height: 1;
+            margin-top: 2rem;
+        }
+
+        @media screen and (max-width: #{$desktop}) {
+            font-size: 20px;
+        }
+        @media screen and (max-width: #{$tabletM}) {
+            >span:last-child {
+                font-size: 38px;
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    &__button {
+        display: flex;
+        @media screen and (max-width: #{$desktop}) {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    &__btn {
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 1.55;
+        color: #ffffff;
+        text-align: center;
+        border-radius: 2px;
+        background-color: $red-color;
+        padding: 15px 30px;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+        @media screen and (max-width: #{$desktop}) {
+            width: 100%;
+        }
+    }
+
+    &__right {
+        position: relative;
+
+        @media screen and (min-width: #{$desktop}) {
+            flex: 0 1 50%;
+        }
+        @media screen and (max-width: #{$desktop}) {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+    &__rightWrap {
+        position: relative;
+
+        @media screen and (max-width: #{$desktop}) {
+            width: 290px;
+            height: 250px;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        right: 0;
+        width: 100%;
+
+        &._bicycle {
+            max-width: 469px;
+            top: -17rem;
+            right: -4rem;
+
+            @media screen and (max-width: #{$desktop}) {
+                top: -2rem;
+                right: -1.5rem;
+            }
+        }
+        &._auto {
+            max-width: 580px;
+            bottom: -14rem;
+            z-index: 8;
+
+            @media screen and (max-width: #{$desktop}) {
+                bottom: 0;
+            }
+        }
+        &._circle {
+            max-width: 330px;
+            right: 9rem;
+            top: -12rem;
+
+            @media screen and (max-width: #{$desktop}) {
+                max-width: 180px;
+                right: 5rem;
+                top: 2rem;
+            }
+        }
+        &._samokat {
+            max-width: 533px;
+            right: 11rem;
+            bottom: -11rem;
+
+            @media screen and (max-width: #{$desktop}) {
+                max-width: 530px;
+                right: 4.5rem;
+                bottom: 3rem;
+            }
+        }
+        &._bottle {
+            max-width: 249px;
+            top: -7rem;
+            right: 22rem;
+
+            @media screen and (max-width: #{$desktop}) {
+                max-width: 150px;
+                top: 5rem;
+                right: 10rem;
+                z-index: 7;
+            }
+        }
+        &._sweatshirt {
+            max-width: 466px;
+            bottom: -6rem;
+            right: 2rem;
+
+            @media screen and (max-width: #{$desktop}) {
+                bottom: 3rem;
+                right: 1rem;
+            }
+        }
+        &._music {
+            max-width: 196px;
+            right: 18rem;
+            top: -11rem;
+
+            @media screen and (max-width: #{$desktop}) {
+                max-width: 130px;
+                right: 10rem;
+                top: 3rem;
+            }
+        }
+        &._cleaner {
+            max-width: 247px;
+            bottom: -5rem;
+            right: -1rem;
+
+            @media screen and (max-width: #{$desktop}) {
+                max-width: 220px;
+                bottom: 1.8rem;
+                right: -33px;
+            }
+        }
+
+
+    }
+}
+
+.gift {
+    overflow: hidden;
+    background: #ffffff;
+
+    @media screen and (max-width: #{$tabletL}) {
+        background: #000;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+
+        @media screen and (max-width: #{$tabletL}) {
+          grid-template-columns: 1fr;
+        }
+    }
+
+    &__left {
+        position: relative;
+        display: flex;
+
+        @media screen and (min-width: #{$tabletL}) {
+            height: 100%;
+            align-items: flex-end;
+            min-height: 650px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 50vw;
+                height: 100%;
+                background: #000;
+            }
+        }
+        @media screen and (max-width: #{$desktop}) {
+          flex-direction: column;
+        }
+        @media screen and (max-width: #{$tabletL}) {
+          align-items: center;
+        }
+        @media screen and (max-width: #{$tabletM}) {
+            margin-bottom: 2rem;
+        }
+
+    }
+
+    &__img {
+        @media screen and (min-width: #{$desktop}) {
+            max-width: 860px;
+            position: absolute;
+            top: -5rem;
+        }
+        @media screen and (max-width: #{$desktop}) {
+            position: relative;
+            left: 8rem;
+            max-width: 485px;
+        }
+        @media screen and (max-width: #{$tabletL}) {
+            left: 50px;
+            right: auto;
+            width: 100%;
+        }
+    }
+
+    &__txt {
+        position: relative;
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 1.1;
+        color: #ffffff;
+        text-align: right;
+        width: 100%;
+        padding-bottom: 3rem;
+
+        @media screen and (min-width: $tabletL) {
+            padding-right: 3rem;
+        }
+        @media screen and (max-width: #{$tabletL}) {
+          text-align: center;
+        }
+        @media screen and (max-width: #{$tabletM}) {
+            font-size: 28px;
+        }
+    }
+
+    &__right {
+        display: grid;
+        grid-template-rows: 1fr auto;
+        height: 100%;
+    }
+
+    &__list {
+        margin: 0 auto;
+
+        >li {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 900;
+            line-height: 2.2;
+            color: #000000;
+        }
+
+        @media screen and (min-width: #{$tabletM}) {
+            padding: 50px 40px;
+        }
+        @media screen and (min-width: #{$desktop}) {
+            width: 75%;
+        }
+        @media screen and (max-width: #{$desktop}) {
+            width: 90%;
+        }
+        @media screen and (max-width: #{$tabletL}) {
+            width: 95%;
+            margin-bottom: 1.5rem;
+
+            >li {
+                color: #ffffff;
+            }
+        }
+    }
+
+    &__period {
+        position: relative;
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 1.1;
+        color: #ffffff;
+        background: $red-color;
+        padding: 25px 0 25px 7rem;
+
+        >span {
+            position: relative;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50vw;
+            height: 100%;
+            background: $red-color;
+        }
+
+        @media screen and (max-width: #{$desktop}) {
+            padding: 25px 0 25px 4rem;
+        }
+        @media screen and (max-width: #{$tabletL}) {
+            &::before {
+              width: 100vw;
+              left: -15px;
+          }
+        }
+        @media screen and (max-width: #{$tabletM}) {
+            font-size: 25px;
+            padding: 25px 6px;
+        }
+    }
+}
+
+.membership {
+    background: #ffffff;
+    overflow: hidden;
+
+    @media screen and (max-width: #{$desktop}) {
+        width: 100vw;
+    }
+
+    &__content {
+        padding: 90px 0;
+
+        @media screen and (min-width: $tabletL) {
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            align-items: center;
+        }
+
+        @media screen and (max-width: #{$tabletM}) {
+            padding: 40px 0;
+        }
+    }
+
+    &__left {
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: 80px;
+        line-height: .9;
+        color: $gray3-color;
+        text-transform: uppercase;
+        margin-bottom: 80px;
+
+        @media screen and (max-width: #{$desktop}) {
+            font-size: 60px;
+            line-height: 1.2;
+            margin-bottom: 40px;
+        }
+
+        @media screen and (max-width: #{$tabletM}) {
+            font-size: 36px;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        margin-bottom: 50px;
+
+        @media screen and (max-width: #{$tabletM}) {
+          grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+
+        >span {
+            font-weight: 900;
+            font-size: 100px;
+            line-height: .9;
+            color: $gray3-color;
+        }
+        >div {
+            >p {
+                &:first-child {
+                    font-weight: 900;
+                    font-size: 22px;
+                    line-height: 1.1;
+                    color: #000000;
+                    text-transform: uppercase;
+                    margin-bottom: 20px;
+                }
+                &:last-child {
+                    font-family: 'Inter',Arial,sans-serif;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 1.2;
+                    color: $gray4-color;
+                }
+            }
+        }
+    }
+
+    &__btns {
+        display: flex;
+        gap: 15px;
+
+        @media screen and (max-width: #{$tabletL}) {
+            display: grid;
+        }
+    }
+
+    &__btn {
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 1.55;
+        color: $gray3-color;
+        background-color: $gray-light-color;
+        border-radius: 2px;
+        height: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 15px 30px;
+        white-space: nowrap;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+        >svg {
+            width: 18px;
+            height: 19px;
+            margin-right: 10px;
+        }
+
+        &_red {
+            color: #ffffff;
+            background-color: $red-color;
+        }
+
+        @media screen and (max-width: #{$tabletM}) {
+            font-size: 18px;
+        }
+    }
+
+    &__right {
+        @media screen and (max-width: #{$desktop}) {
+            position: relative;
+            height: 100%;
+        }
+        @media screen and (max-width: #{$tabletL}) {
+          display: none;
+        }
+    }
+
+    &__img {
+        max-width: 600px;
+
+        @media screen and (min-width: #{$desktop}) {
+            width: 100%;
+        }
+        @media screen and (max-width: #{$desktop}) {
+            position: absolute;
+            bottom: 0;
+            transform: translateX(-3rem);
+        }
+    }
+}
+
+.promoVideo {
+
+    &__content {
+        padding: 90px 0;
+
+        @media screen and (max-width: #{$tabletM}) {
+            padding: 40px 0;
+        }
+    }
+
+    &__video {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+
+        iframe, ._youtube {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        ._youtube {
+            background-size: cover;
+            background-repeat: no-repeat;
+            cursor: pointer;
+
+            .play {
+                background-position: 0 -50px;
+                background-size: 100% auto;
+                background-repeat: no-repeat;
+                position: absolute;
+                height: 50px;
+                width: 69px;
+                transition: none;
+                top:0;
+                left:0;
+                right:0;
+                bottom:0;
+                margin:auto;
+            }
+
+            &:hover {
+                .play {
+                    background-position: 0 0;
+                }
+            }
+        }
+    }
+}
+
+.about {
+
+    &__content {
+        padding: 90px 0;
+
+        @media screen and (max-width: #{$tabletM}) {
+            padding: 40px 0;
+        }
+    }
+
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        @media screen and (max-width: #{$desktop}) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: 80px;
+        line-height: 1;
+        color: #ffffff;
+        max-width: 550px;
+
+        @media screen and (max-width: #{$desktop}) {
+            font-size: 60px;
+        }
+        @media screen and (max-width: #{$tabletM}) {
+            font-size: 36px;
+        }
+    }
+
+    &__txt {
+        font-weight: 500;
+        line-height: 1.4;
+        color: #ffffff;
+        max-width: 380px;
+        padding-top: 20px;
+
+        >p {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+
+        @media screen and (max-width: #{$tabletL}) {
+          &:not(&._mobile) {
+              display: none;
+          }
+        }
+
+        &._mobile {
+            @media screen and (min-width: $tabletL) {
+              display: none;
+            }
+            @media screen and (max-width: #{$tabletL}) {
+              text-align: center;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__picture {
+    }
+
+    &__img {
+        width: 100%;
+    }
+}
+
+.projects {
+    overflow: hidden;
+
+    &__content {
+        padding-bottom: 90px;
+
+        @media screen and (max-width: #{$tabletM}) {
+            padding-bottom: 45px;
+        }
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 1.55;
+        color: #ffffff;
+        text-transform: uppercase;
+        margin-bottom: 45px;
+    }
+
+    &__main {
+
+        @media screen and (min-width: #{$desktop}) {
+            $paddingForSlider: calc((100vw - (#{$containerWidth}px)) / 2);
+            width: calc(100vw - #{$paddingForSlider});
+            margin-left: $paddingForSlider;
+        }
+        @media screen and (max-width: #{$desktop}) {
+            width: 100vw;
+        }
+    }
+
+    &__slider {
+        width: 100%;
+    }
+
+    &__slide {
+
+        >a {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            opacity: .6;
+            transition: opacity .3s;
+
+            @media screen and (any-hover: hover) {
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__img {
+        max-width: 100%;
+    }
+}
+
+.join {
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        padding-bottom: 90px;
+
+        @media screen and (max-width: #{$tabletL}) {
+            grid-template-columns: 1fr;
+            padding-bottom: 45px;
+        }
+    }
+
+    &__left {
+        position: relative;
+        padding: 70px 0 100px 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 50vw;
+            height: 100%;
+            background: $red-color;
+        }
+
+        @media screen and (max-width: #{$desktop}) {
+            &::before {
+                display: none;
+            }
+        }
+        @media screen and (max-width: #{$tabletL}) {
+            padding: 70px 0;
+            margin-bottom: 50px;
+
+            &::before {
+                width: 100vw;
+                right: -15px;
+                display: block;
+            }
+        }
+        @media screen and (max-width: #{$tabletM}) {
+            padding: 45px 0;
+        }
+    }
+
+    &__title {
+        position: relative;
+        font-weight: 900;
+        font-size: 25px;
+        line-height: .9;
+        color: #ffffff;
+
+        >span {
+            display: block;
+            font-size: 80px;
+            margin-top: 20px;
+        }
+
+        @media screen and (max-width: #{$tabletM}) {
+            >span {
+                display: block;
+                font-size: 36px;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &__right {}
+
+    &__form {
+        display: grid;
+        gap: 20px;
+
+        @media screen and (min-width: $tabletL) {
+            margin-left: 15%;
+            max-width: 300px;
+        }
+    }
+}
+
+.form {
+
+    &__field {
+        display: flex;
+    }
+
+    &__input {
+        width: 100%;
+        color: rgb(255, 255, 255);
+        height: 50px;
+        border-radius: 2px;
+        border: 1px solid rgb(255, 255, 255);
+        background-color: rgb(25, 25, 25);
+        padding: 0 15px;
+    }
+
+    &__submit {
+        font-size: 20px;
+        background-color: $red-color;
+        border-radius: 2px;
+        color: #fff;
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    &__agree {
+        font-size: 13px;
+        color: #ffffff;
+        text-align: center;
+        margin-top: 15px;
+
+        >a {
+            color: inherit;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+    }
+
+    &__msg {
+        display: none;
+
+        &._active {
+            display: block;
+        }
+
+        &._success {
+            color: $green-color;
+        }
+        &._failed {
+            color: $red-color;
+        }
+    }
+}
+
+.policy {
+    font-family: 'Inter';
+    font-size: 18px;
+
+    ul.first {
+        >li {
+            line-height: 1.55;
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            >h2 {
+                line-height: 1.55;
+            }
+            >ul {
+                >li {}
+            }
+        }
+    }
+}
