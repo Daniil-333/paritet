@@ -14,4 +14,6 @@
   <li><strong>npm run build</strong> - сборка фронтенд</li>
 
   <li><strong>npm run build:admin</strong> - сборка админки</li>
+
+  <li><strong>/login</strong> - путь в Админку. Данные для входа в дампе paritet.sql</li>
 </ul>
